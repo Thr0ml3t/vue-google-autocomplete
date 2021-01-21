@@ -1,9 +1,10 @@
 <template>
-    <input
+    <v-text-field
         ref="autocomplete"
         type="text"
         :class="classname"
         :id="id"
+	:label="label"
         :placeholder="placeholder"
         :disabled="disabled"
         v-model="autocompleteText"
@@ -12,7 +13,7 @@
         @change="onChange"
         @keypress="onKeyPress"
         @keyup="onKeyUp"
-    />
+    ></v-text-field>
 </template>
 
 <script>
@@ -41,10 +42,13 @@
           },
 
           classname: String,
-
+	  label: {
+            type: String,
+            default: 'Address'
+          },
           placeholder: {
             type: String,
-            default: 'Start typing'
+            default: ''
           },
 
           disabled: {
