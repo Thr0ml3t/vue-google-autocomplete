@@ -7,6 +7,7 @@
 	:label="label"
         :placeholder="placeholder"
         :disabled="disabled"
+	:error-messages="error-messages"
         v-model="autocompleteText"
         @focus="onFocus()"
         @blur="onBlur()"
@@ -40,7 +41,10 @@
             type: String,
             required: true
           },
-
+	  error-messages: {
+	    type: Array,
+	    default: []
+	  }
           classname: String,
 	  label: {
             type: String,
