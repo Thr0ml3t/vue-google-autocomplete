@@ -1,5 +1,6 @@
 <template>
     <v-text-field
+    	autocomplete="new-password"
         ref="autocomplete"
         type="text"
         :class="classname"
